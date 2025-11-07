@@ -13,4 +13,3 @@ export 'package:gap/gap.dart';
 export '../handlers/snackbar.dart';
 export '../assets_gen/assets.gen.dart';
 export '../shared_widgets/page_loader.dart';
-export '../shared_widgets/loading_overlay_scaffold.dart';
