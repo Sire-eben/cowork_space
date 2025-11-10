@@ -105,6 +105,7 @@ class _FrequentlyAskedQuestionsState extends State<FrequentlyAskedQuestions> {
                 ],
               ),
             ),
+            Gap(32),
             Expanded(
               child: Column(
                 children: List.generate(faqsList.length, (index) {
