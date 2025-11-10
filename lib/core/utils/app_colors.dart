@@ -8,6 +8,7 @@ class AppColors {
   static Color unorganicGreen = const Color(0xffD3F985);
   static Color shinyPink = const Color(0xffFCBEDC);
   static Color almostOrange = const Color(0xffFBC899);
+  static Color humbleBlack = const Color(0xff1D1E1C);
   // static Color primary = const Color(0xff093312);
   static Color primaryBackground = const Color(0xff093312);
   static Color lightGreen = const Color(0xff5FFF7F);
