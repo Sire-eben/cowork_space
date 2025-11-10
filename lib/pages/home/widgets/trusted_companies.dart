@@ -7,7 +7,7 @@ class TrustedCompanies extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsGeometry.symmetric(vertical: 80),
+      padding: EdgeInsetsGeometry.symmetric(vertical: isMobile(context) ? 48 : 80),
       child: Column(
         children: [
           SelectableText(

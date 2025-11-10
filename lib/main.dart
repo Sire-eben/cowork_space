@@ -1,4 +1,4 @@
-import 'package:breej_hub_mobile/components/navbar.dart';
+import 'package:breej_hub_mobile/components/navbar/navbar.dart';
 import 'package:breej_hub_mobile/core/utils/__utils.dart';
 import 'package:breej_hub_mobile/pages/booking/booking_page.dart';
 import 'package:breej_hub_mobile/pages/home/home_page.dart';

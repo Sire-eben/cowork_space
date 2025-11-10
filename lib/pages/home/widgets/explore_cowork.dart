@@ -14,21 +14,27 @@ class ExploreCowork extends StatelessWidget {
           Gap(16),
           SelectableText(
             'Explore Cowork Through Our\n',
-            style: AppStyles.raleway13Bd.copyWith(fontSize: 48, height: .4),
+            style: AppStyles.raleway13Bd.copyWith(
+              fontSize: isMobile(context) ? 24 : 48,
+              height: isMobile(context) ? null : .4,
+            ),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/images/lens.png', height: 58),
+              Image.asset('assets/images/lens.png', height: isMobile(context) ? 34 : 58),
               SelectableText(
                 ' Lens',
-                style: AppStyles.raleway13Bd.copyWith(fontSize: 48, height: .6),
+                style: AppStyles.raleway13Bd.copyWith(
+                  fontSize: isMobile(context) ? 24 : 48,
+                  height: isMobile(context) ? null : .4,
+                ),
               ),
             ],
           ),
           Gap(24),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: context.getWidth(.2)),
+            padding: EdgeInsets.symmetric(horizontal: isMobile(context) ? 0 : context.getWidth(.2)),
             child: SelectableText(
               'Experience the essence of Cowork before setting foot in our dynamic spaces. Our immersive video tour gives you a sneak peek into the vibrant atmosphere, cutting-edge facilities, and collaborative energy that define the Cowork experience.',
               style: AppStyles.raleway14Rg.copyWith(height: 2),

@@ -6,8 +6,9 @@ class SeizeTheMoment extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool kMobile = isMobile(context);
     return Padding(
-      padding: EdgeInsetsGeometry.symmetric(vertical: 112),
+      padding: EdgeInsetsGeometry.symmetric(vertical: kMobile ? 64 : 112),
       child: Column(
         children: [
           Row(
@@ -15,23 +16,26 @@ class SeizeTheMoment extends StatelessWidget {
             children: [
               SelectableText(
                 'Seize ',
-                style: AppStyles.raleway13Bd.copyWith(fontSize: 48, height: .4),
+                style: AppStyles.raleway13Bd.copyWith(fontSize: 48, height: kMobile ? null : .4),
               ),
-              Image.asset('assets/images/seize.png', height: 58),
-              SelectableText(
-                ' The Moment –',
-                style: AppStyles.raleway13Bd.copyWith(fontSize: 48, height: .6),
-              ),
+              Image.asset('assets/images/seize.png', height: kMobile ? 48 : 58),
             ],
           ),
-          Gap(24),
           SelectableText(
-            'Join Cowork Today!',
-            style: AppStyles.raleway13Bd.copyWith(fontSize: 48, height: .4),
+            ' The Moment –',
+            style: AppStyles.raleway13Bd.copyWith(fontSize: 48, height: kMobile ? null : .4),
+          ),
+          SelectableText(
+            'Join Cowork',
+            style: AppStyles.raleway13Bd.copyWith(fontSize: 48, height: kMobile ? null : .4),
+          ),
+          SelectableText(
+            'Today!',
+            style: AppStyles.raleway13Bd.copyWith(fontSize: 48, height: kMobile ? null : .4),
           ),
           Gap(24),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: context.getWidth(.2)),
+            padding: EdgeInsets.symmetric(horizontal: kMobile ? 0 : context.getWidth(.2)),
             child: SelectableText(
               "Uncover the transformative power of Cowork as echoed by those who've made it their professional haven. This is more than finding a desk; it's discovering a community that fuels your journey to success.",
               style: AppStyles.raleway14Rg.copyWith(height: 2),

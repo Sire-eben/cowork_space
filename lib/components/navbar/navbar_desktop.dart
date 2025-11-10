@@ -3,12 +3,11 @@ import 'package:breej_hub_mobile/core/utils/__utils.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class Navbar extends StatelessWidget {
-  const Navbar({super.key});
+class NavbarDesktop extends StatelessWidget {
+  const NavbarDesktop({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // Get the current route location
     final currentPath = GoRouterState.of(context).uri.toString();
 
     return Padding(

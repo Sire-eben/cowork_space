@@ -1,7 +1,7 @@
 import 'package:breej_hub_mobile/components/footer.dart';
 import 'package:breej_hub_mobile/pages/home/widgets/chronicles.dart';
 import 'package:breej_hub_mobile/pages/home/widgets/cowork_in_words.dart';
-import 'package:breej_hub_mobile/pages/home/widgets/elevate_workspace.dart';
+import 'package:breej_hub_mobile/pages/home/widgets/elevate_workspace_desktop.dart';
 import 'package:breej_hub_mobile/pages/home/widgets/explore_cowork.dart';
 import 'package:breej_hub_mobile/pages/home/widgets/faq.dart';
 import 'package:breej_hub_mobile/pages/home/widgets/seize_the_moment.dart';

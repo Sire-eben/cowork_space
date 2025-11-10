@@ -15,11 +15,12 @@ class StatisticsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: isMobile(context)
+            ? CrossAxisAlignment.center
+            : CrossAxisAlignment.start,
         children: [
           Stack(
             clipBehavior: Clip.none,
-
             children: [
               Positioned(
                 bottom: -5,
@@ -30,7 +31,6 @@ class StatisticsWidget extends StatelessWidget {
                   decoration: BoxDecoration(shape: BoxShape.circle, color: color),
                 ),
               ),
-
               SelectableText(
                 value,
                 style: AppStyles.raleway24Xbd.copyWith(fontWeight: FontWeight.bold, fontSize: 48),
@@ -39,7 +39,6 @@ class StatisticsWidget extends StatelessWidget {
             ],
           ),
           Gap(8),
-
           SelectableText(title, style: AppStyles.raleway14Rg, textAlign: TextAlign.left),
         ],
       ),
