@@ -1,4 +1,4 @@
-import 'package:breej_hub_mobile/components/footer.dart';
+import 'package:breej_hub_mobile/components/footer/footer.dart';
 import 'package:breej_hub_mobile/pages/home/widgets/chronicles.dart';
 import 'package:breej_hub_mobile/pages/home/widgets/cowork_in_words.dart';
 import 'package:breej_hub_mobile/pages/home/widgets/elevate_workspace_mobile.dart';
@@ -25,14 +25,14 @@ class _HomeMobileState extends State<HomeMobile> {
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Column(
         children: [
-          // ElevateWorkspaceMobile(),
-          // TrustedCompanies(),
-          // WhyChooseCowork(),
-          // ExploreCowork(),
-          // YoutubeComponent(),
-          // TransformativeStatistics(),
-          // CoworkInWords(),
-          // FrequentlyAskedQuestions(),
+          ElevateWorkspaceMobile(),
+          TrustedCompanies(),
+          WhyChooseCowork(),
+          ExploreCowork(),
+          YoutubeComponent(),
+          TransformativeStatistics(),
+          CoworkInWords(),
+          FrequentlyAskedQuestions(),
           SeizeTheMoment(),
           CoworkChronicles(),
           Footer(),

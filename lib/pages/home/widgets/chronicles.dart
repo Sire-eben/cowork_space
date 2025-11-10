@@ -8,6 +8,7 @@ class CoworkChronicles extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool kMobile = isMobile(context);
     return Padding(
       padding: EdgeInsetsGeometry.symmetric(vertical: 112),
       child: Column(
@@ -16,22 +17,22 @@ class CoworkChronicles extends StatelessWidget {
           Gap(16),
           SelectableText(
             'Insights, Innovation, and ',
-            style: AppStyles.raleway13Bd.copyWith(fontSize: 48, height: .4),
+            style: AppStyles.raleway13Bd.copyWith(fontSize: kMobile ? 24 : 48, height: .4),
           ),
           Gap(24),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/images/chronicles.png', height: 58),
+              Image.asset('assets/images/chronicles.png', height: kMobile ? 34 : 58),
               SelectableText(
                 ' Inspiration',
-                style: AppStyles.raleway13Bd.copyWith(fontSize: 48, height: .6),
+                style: AppStyles.raleway13Bd.copyWith(fontSize: kMobile ? 24 : 48, height: .6),
               ),
             ],
           ),
           Gap(24),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: context.getWidth(.2)),
+            padding: EdgeInsets.symmetric(horizontal: kMobile ? 0 : context.getWidth(.2)),
             child: SelectableText(
               "Stay updated on the latest trends in coworking, productivity tips, and success stories that define the Cowork experience.",
               style: AppStyles.raleway14Rg.copyWith(height: 2),
@@ -39,16 +40,26 @@ class CoworkChronicles extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
-          Gap(80),
-          Row(
-            spacing: 32,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: List.generate(blogPosts.length, (index) {
-              final post = blogPosts[index];
-              return BlogCard(post: post);
-            }),
-          ),
-          Gap(64),
+          Gap(kMobile ? 40 : 80),
+          if (kMobile)
+            Column(
+              spacing: 32,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: List.generate(blogPosts.length, (index) {
+                final post = blogPosts[index];
+                return BlogCard(post: post);
+              }),
+            )
+          else
+            Row(
+              spacing: 32,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: List.generate(blogPosts.length, (index) {
+                final post = blogPosts[index];
+                return BlogCard(post: post);
+              }),
+            ),
+          Gap(kMobile ? 32 : 64),
           InkWell(
             // onTap: () => context.go(path),
             hoverColor: Colors.white,

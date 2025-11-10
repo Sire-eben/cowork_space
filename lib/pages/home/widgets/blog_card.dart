@@ -9,8 +9,9 @@ class BlogCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Column(
+    bool kMobile = isMobile(context);
+    if (kMobile) {
+      return Column(
         children: [
           Image.asset(post.image),
           Gap(24),
@@ -42,7 +43,43 @@ class BlogCard extends StatelessWidget {
             ],
           ),
         ],
-      ),
-    );
+      );
+    } else {
+      return Expanded(
+        child: Column(
+          children: [
+            Image.asset(post.image),
+            Gap(24),
+            Row(
+              spacing: 16,
+              children: [
+                Container(
+                  padding: EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+                  decoration: BoxDecoration(
+                    color: post.color,
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: SelectableText(post.tag, style: AppStyles.raleway14Smbd),
+                ),
+                SelectableText(post.time),
+              ],
+            ),
+            Gap(16),
+            SelectableText(
+              post.topic,
+              style: AppStyles.raleway24Smbd.copyWith(fontWeight: FontWeight.bold),
+            ),
+            Gap(24),
+            Row(
+              spacing: 20,
+              children: [
+                SelectableText('Read more'),
+                Icon(Icons.chevron_right, color: Colors.black),
+              ],
+            ),
+          ],
+        ),
+      );
+    }
   }
 }

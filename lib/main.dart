@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       routerConfig: router,
       debugShowCheckedModeBanner: false,
-      title: 'Breej Hub',
+      title: 'Cowork Space',
       theme: AppTheme.defaultTheme(context),
     );
   }
